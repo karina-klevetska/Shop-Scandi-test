@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import brandIcon from '../../images/brand-icon.png'
 import pointDown from '../../images/point-down.svg'
 import emptyCartImg from '../../images/empty-cart.svg'
@@ -9,19 +10,34 @@ export const Header = () => {
       <nav>
         <ul className={s.list}>
           <li>
-            <a className={s.link} href=''>
-              women
-            </a>
+            <NavLink
+              to='/all'
+              className={({ isActive }) =>
+                isActive ? `${s.active}` : `${s.link}`
+              }
+            >
+              all
+            </NavLink>
           </li>
           <li>
-            <a href='' className={s.link}>
-              men
-            </a>
+            <NavLink
+              to='clothes'
+              className={({ isActive }) =>
+                isActive ? `${s.active}` : `${s.link}`
+              }
+            >
+              clothes
+            </NavLink>
           </li>
           <li>
-            <a href='' className={s.link}>
-              kids
-            </a>
+            <NavLink
+              to='/tech'
+              className={({ isActive }) =>
+                isActive ? `${s.active}` : `${s.link}`
+              }
+            >
+              tech
+            </NavLink>
           </li>
         </ul>
       </nav>

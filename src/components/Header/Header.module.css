@@ -19,9 +19,18 @@
     background-color: transparent;
 }
 
-.link {
+.link,
+.active {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.2;
-    padding: 0 15px 0 15px;
+    padding: 0 16px 32px 16px;
+}
+
+.active {
+    font-weight: 600;
+    color: #5ECE7B;
+    border-bottom: 2px solid #5ECE7B;
+    pointer-events: none;
+    
 }
